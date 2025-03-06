@@ -12,7 +12,7 @@ public class MyFileP2
 		Scanner input = new Scanner(System.in);
 		String response;
 		
-		textFile = new File("C:\\Users\\amabdalla\\Chapter11\\src\\SkillBuilders\\zzz.txt");
+		textFile = new File("C:\\Users\\amabdalla\\Chapter11\\src\\SkillBuilders\\z123.txt");
 		
 		if(textFile.exists())
 		{

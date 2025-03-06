@@ -1,55 +1,60 @@
 package SkillBuilders;
 
-import java.io.*;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
 import java.util.Scanner;
 
-public class Roster 
-{
+public class Roster {
 
 	public static void main(String[] args) 
 	{
+
 		File stuNameFile;
-		String fileName, firstName, lastName;
-		int numStudents;
 		Scanner input = new Scanner(System.in);
+		String fileName;
+		String firstName, lastName;
+		int numStudents;
+
+		/* obtain file name and number of students from user */
 		
-		//Obtain file name and number of students
-		System.out.print("Enter the file directory: ");
-		fileName = input.nextLine();
-		stuNameFile = new File(fileName);
-		
-		System.out.print("How many students: ");
-		numStudents = input.nextInt();
-		
-		//Write Objects
-		try
-		{
+		//...
+		//...
+		//...
+		//...
+
+		try {
+			
+			/* write objects */
+			
 			FileOutputStream out = new FileOutputStream(stuNameFile);
 			ObjectOutputStream writeStu = new ObjectOutputStream(out);
 			
-			for(int i = 0; i < numStudents; i++)
-			{
-				System.out.print("Enter student first name: ");
-				firstName = input.next();
-				System.out.print("Enter student last name: ");
-				lastName = input.next();
-				writeStu.writeObject(new StuName(firstName, lastName));
+			for (int i = 0; i < /*?*/; i++) 
+            {
+				//..................
 			}
 			writeStu.close();
-			System.out.println("Data has been written to the file");
-			
-			//Read Objects
+    		System.out.println("Data written to file.");
+
+    		
+    		/* read and display objects */
+    		
 			FileInputStream in = new FileInputStream(stuNameFile);
 			ObjectInputStream readStuName = new ObjectInputStream(in);
 			
-			for(int j = 0; j < numStudents; j++)
+			
+			for (int i = 0; i < /*?*/; i++) 
 			{
-				System.out.println((StuName)readStuName.readObject());
+				//........
 			}
 			readStuName.close();
 			
-		}
-		catch (FileNotFoundException e) 
+    	} catch (FileNotFoundException e) 
 		{
 			System.out.println("File could not be found.");
     		System.err.println("FileNotFoundException: " + e.getMessage());
@@ -62,10 +67,7 @@ public class Roster
 			System.out.println("Class could not be used to cast object.");
     		System.err.println("ClassNotFoundException: " + e.getMessage());
     	}
-		
-		
-		
-		
+	
 
 	}
 
