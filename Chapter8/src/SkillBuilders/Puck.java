@@ -49,4 +49,44 @@ public class Puck extends Disk implements Comparable
 		return weight;
 	}
 
+	public boolean equals(Object obj) 
+	{
+		Puck testObj = (Puck)obj;
+		
+	 	if (testObj.getDivision() == getDivision()) 
+	 	{
+			return(true);
+		} 
+	 	else 
+	 	{
+			return(false);
+		}
+	}
+	
+	public String toString() 
+	{
+		String PuckString;
+
+		PuckString = "The puck has a weight " + getWeight()
+					+ " and division "+ getDivision();
+	 	return(PuckString);
+	}
+	
+	public int compareTo(Object p)
+	{
+		Puck testPuck = (Puck)p;
+		
+		if(weight < testPuck.getWeight())
+		{
+			return(-1);
+		}
+		else if(weight == testPuck.getWeight())
+		{
+			return(0);
+		}
+		else
+		{
+			return(1);
+		}
+	}
 }
