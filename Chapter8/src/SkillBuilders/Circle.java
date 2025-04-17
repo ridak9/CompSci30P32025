@@ -6,7 +6,8 @@ public class Circle
 	private double radius;
 		
 	
-	public Circle() {
+	public Circle() 
+	{
 		radius = 1;			//default radius
 	}
 	
@@ -33,7 +34,8 @@ public class Circle
 	 	return(radius);
 	}
 		
-	public boolean equals(Object obj) {
+	public boolean equals(Object obj) 
+	{
 		Circle testObj = (Circle)obj;
 		
 	 	if (testObj.getRadius() == radius) {
