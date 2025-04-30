@@ -2,30 +2,22 @@ package SearchLocations;
 
 public class Searches 
 {
-	public static int binarySearch(int[] items, int start, int end, int goal)
+	public static int binarySearch(int[] items, int start, int end, int goal) 
 	{
-		if(start > end)
-		{
+
+		if (start > end) {
 			return(-1);
-		}
-		else
-		{
+		} else {
 			int mid = (start + end) / 2;
-			
-			if(goal == items[mid])
-			{
+			if (goal == items[mid]) {
 				System.out.println("Examining " + mid);
 				return(mid);
-			}
-			else if(goal < items[mid])
-			{
+			} else if (goal < items[mid]) {
 				System.out.println("Examining " + mid);
 				return(binarySearch(items, start, mid-1, goal));
-			}
-			else
-			{
+			} else {
 				System.out.println("Examining " + mid);
-				return(binarySearch(items, start, mid+1, goal));
+				return(binarySearch(items, mid+1, end, goal));
 			}
 		}
 	}
