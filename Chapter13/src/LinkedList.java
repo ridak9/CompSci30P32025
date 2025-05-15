@@ -57,5 +57,55 @@ public class LinkedList
 			}
 		}
 	}
+	
+	
+	public int size()
+	{
+		Node current = head;
+		int count = 0;
+		
+		if(current != null)
+		{
+			count += 1;
+			
+			while(current.getNext() != null)
+			{
+				current = current.getNext();
+				count +=1;
+			}
+			return count;
+		}
+		else
+		{
+			return 0;
+		}
+	}
+	
+	public String toString()
+	{
+		Node current = head;
+		String listString;
+		
+		if(current != null)
+		{
+			listString  = current.getData() + "\n";
+			
+			while(current.getNext() != null)
+			{
+				current = current.getNext();
+				listString += current.getData() + "\n";
+			}
+			return(listString);
+		}
+		else
+		{
+			return("There are no items in the list.");
+		}
+	}
+	
+	public void makeEmpty()
+	{
+		head = null;
+	}
 
 }
